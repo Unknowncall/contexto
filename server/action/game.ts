@@ -54,27 +54,8 @@ export async function guessWord (req: Request, res: Response): Promise<void> {
     res.status(404).json({ error: 'No game found for that date' })
   }
 
-  const wordWithoutLastLetter = word.slice(0, -1)
-  const wordWithLastLetter = word + 's'
-  const wordWithLastLetterPlural = word + 'es'
-  const wordWithLastLetterPlural2 = word + 'ies'
-  const wordWithLastLetterPlural3 = word + 'ves'
-  const wordWithLastLetterPlural4 = word + 'zes'
-  const wordWithLastLetterPlural5 = word + 'xes'
-  const wordWithLastLetterPlural6 = word + 'ches'
-  const wordWithLastLetterPlural7 = word + 'shes'
-
   const possibleWords = [
-    word,
-    wordWithoutLastLetter,
-    wordWithLastLetter,
-    wordWithLastLetterPlural,
-    wordWithLastLetterPlural2,
-    wordWithLastLetterPlural3,
-    wordWithLastLetterPlural4,
-    wordWithLastLetterPlural5,
-    wordWithLastLetterPlural6,
-    wordWithLastLetterPlural7
+    word
   ]
 
   let distance = 0
